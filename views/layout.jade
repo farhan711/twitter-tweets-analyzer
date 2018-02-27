@@ -1,0 +1,30 @@
+//- layout.jade
+doctype html
+html(lang="en")
+  head
+    block title
+      title User Modeling NodeJS Starter Application
+ 
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
+    link(rel="icon", href="/images/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="/css/watson-bootstrap-dark.css")
+    link(rel="stylesheet", href="/css/browser-compatibility.css")
+    link(rel="stylesheet", href="/css/watson-code.css")
+    link(rel="stylesheet", href="/css/style.css")
+
+  body
+    div.container
+      div.header.row
+        div.col-lg-3
+          img(src="/images/app.png")
+        div.col-lg-8
+          h2 User Modeling NodeJS Starter Application
+          p The Watson User Modeling service uses linguistic analytics to extract
+            | a spectrum of cognitive and social characteristics from the text
+            | data that a person generates through text messages, tweets, posts, and more.
+      block row-content
+    script(type='text/javascript', src="/js/css_browser_selector.js")

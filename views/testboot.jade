@@ -1,0 +1,44 @@
+doctype hmtl
+html
+  head
+    title Tweet Collector
+    link(rel='stylesheet', href = '/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/teststyle.css')
+
+
+
+
+  body
+    div.nav
+        h1 Tweets Analyzer
+    
+    
+    div.row
+        div.col-md-6
+            div.jumbotron
+              div.tweets
+                h2 Please Enter Handle:
+                form#formEnterHandle(name="enterhandle",method="post",action="/showtweets")
+                  input(type="text", placeholder="Enter Twitter Handle", name="handle")
+                  input(name = "button", type="submit", value = "Controversial Tweets")
+                  input(name = "button", type = "submit", value = "Watson's Analysis") 
+        //div.col-md-1
+                
+        div.col-md-4
+            div.jumbotron
+                div.blurb
+                  h1 More Info
+                  p This app analyzes a Twitter user's tweets. It has two features:
+                  h4 Tweets of Interest
+                  p Use Sentiment Analysis to return all controversial tweets. For a good example, try @kobebryant.
+                  h4 Watson's Analysis
+                  p.
+                    Use a data analysis service originally employed
+                    by IBM Watson (yes, the one that won Jeopardy) to analyze
+                    someone's personality based on their tweets. Try comparing the data across various players. For example, with @kobebryant
+                    vs. @kingjames (Lebron James), Watson reports that Lebron has a significantly higher "Agreeable" rating, while Kobe has a
+                    much higher "Needs: Challenge" rating. Both have very high "Values: Self-Enhancement" ratings.
+    
+
+    
+  

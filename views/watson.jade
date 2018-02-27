@@ -1,0 +1,41 @@
+doctype hmtl
+html
+  head
+    title Watson's Analysis
+    link(rel='stylesheet', href = '/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/watsonstyle.css')
+    
+body
+    div.nav
+        h1 Watson's Analysis
+        h3= tweeter
+        a(href="/") Home
+        a(href="http://en.wikipedia.org/wiki/Big_Five_personality_traits") Big 5 Traits
+        
+        
+    div.datarow
+      div.col-lg-2
+      div.col-lg-8
+        div.jumbotron
+          h2 Personality Analysis (Scrollable)
+          div.row
+            div.col-lg-6
+              if traits
+                div(style="height: 400px; overflow: auto;").well
+                  for trait in traits
+                    div.row(class='flag_#{trait.title}')
+                      div.col-lg-10 
+                        span #{trait.id}
+                      div.col-lg-2
+                        span #{trait.value}
+      div.col-lg-2             
+        if error
+          div.well
+            div.row
+              div.col-lg-12
+                p(style="font-weight:bold;color:red;") Error: #{error}
+    if viz
+      div.row
+        //div.col-lg-2
+        div.col-lg-4
+          != viz

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= title
+    form#formEnterHandle(name="enterhandle",method="post",action="/showid")
+        input(type="text", placeholder="farazthemirage", name="handle")
+        input(name = "button", type="submit", value = "watson")
+        input(name = "button", type = "submit", value = "controversy") 

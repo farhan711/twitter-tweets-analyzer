@@ -1,0 +1,22 @@
+doctype hmtl
+html
+  head
+    title Tweet Collector
+    link(rel='stylesheet', href = '/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/showtweets.css')
+    
+body
+    div.nav
+        h1 Controversial Tweets
+        h3= tweeter
+        a(href="/") Home
+        
+    
+    
+    
+    div.col-md-4
+    div.col-md-4
+        each tweet in tweetlist
+            div.jumbotron
+                p= tweet
+    div.col-md-4

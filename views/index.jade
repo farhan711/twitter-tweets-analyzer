@@ -1,0 +1,27 @@
+//- index.jade
+extends ./layout.jade
+
+block row-content
+  div.row
+    div.col-lg-6
+      h2 Personality Analysis
+      div.row
+        div.col-lg-12
+          if traits
+            div(style="height: 400px; overflow: auto;").well
+              for trait in traits
+                div.row(class='flag_#{trait.title}')
+                  div.col-lg-10 
+                    span #{trait.id}
+                  div.col-lg-2
+                    span #{trait.value}
+          if error
+            div.well
+              div.row
+                div.col-lg-12
+                  p(style="font-weight:bold;color:red;") Error: #{error}
+  if viz
+    div.row
+      div.col-lg-12
+        h2 Visualization
+        != viz
